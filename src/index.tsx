@@ -322,9 +322,6 @@ export const DonutChart = ({
           <Text style={_getLabelValueStyle(displayValue?.color)}>
             70%
           </Text>
-          <Text style={_getLabelTitleStyle(displayValue?.color)}>
-            70%
-          </Text>
         </Animated.View>
       </View>
     </Fragment>
