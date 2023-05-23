@@ -226,7 +226,7 @@ export const DonutChart = ({
       easing: Easing.bezier(0.075, 0.82, 0.165, 1),
       useNativeDriver: true,
     }).start();
-  }, []);
+  }, [data]);
 
   const onUpdateDisplayValue = (value: DonutItem, index: number) => {
     setDisplayValue(value);
