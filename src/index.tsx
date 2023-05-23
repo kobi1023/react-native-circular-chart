@@ -176,7 +176,7 @@ export const DonutChart = ({
         startValue: rotationPaths[i].from,
       });
     });
-  }, []);
+  }, [data]);
 
   useEffect(() => {
     return () => {
@@ -191,7 +191,7 @@ export const DonutChart = ({
         });
       }
     };
-  }, []);
+  }, [data]);
 
   const addListener = ({
     element,
