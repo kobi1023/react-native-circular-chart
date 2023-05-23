@@ -142,7 +142,7 @@ export const DonutChart = ({
         fadeAnimation();
         break;
     }
-  }, []);
+  }, [data]);
 
   const slideAnimation = () => {
     const animations: Animated.CompositeAnimation[] = data.map((_, i) => {
