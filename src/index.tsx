@@ -142,7 +142,7 @@ export const DonutChart = ({
         fadeAnimation();
         break;
     }
-  }, [data]);
+  }, []);
 
   const slideAnimation = () => {
     const animations: Animated.CompositeAnimation[] = data.map((_, i) => {
@@ -176,7 +176,7 @@ export const DonutChart = ({
         startValue: rotationPaths[i].from,
       });
     });
-  }, [data]);
+  }, []);
 
   useEffect(() => {
     return () => {
@@ -191,7 +191,7 @@ export const DonutChart = ({
         });
       }
     };
-  }, [data]);
+  }, []);
 
   const addListener = ({
     element,
@@ -226,7 +226,7 @@ export const DonutChart = ({
       easing: Easing.bezier(0.075, 0.82, 0.165, 1),
       useNativeDriver: true,
     }).start();
-  }, [data]);
+  }, []);
 
   const onUpdateDisplayValue = (value: DonutItem, index: number) => {
     setDisplayValue(value);
@@ -320,7 +320,10 @@ export const DonutChart = ({
         </Svg>
         <Animated.View style={_getLabelWrapperStyle()}>
           <Text style={_getLabelValueStyle(displayValue?.color)}>
-            70%
+            {displayValue?.value}
+          </Text>
+          <Text style={_getLabelTitleStyle(displayValue?.color)}>
+            {displayValue?.name}
           </Text>
         </Animated.View>
       </View>
