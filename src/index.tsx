@@ -311,7 +311,7 @@ export const DonutChart = ({
                 strokeLinecap={type}
                 d={drawPath}
                 opacity={animateContainerOpacity}
-                fill="lightgray"
+                fill="none"
                 stroke={data[i].color}
                 strokeWidth={animatedStrokeWidths[i]}
               />
