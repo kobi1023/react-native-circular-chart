@@ -31,7 +31,7 @@ export type IDonutProps = {
   radius: number;
   startAngle?: number;
   endAngle?: number;
-  dispalyTitle: string;
+  title: string;
   strokeWidth?: number;
   type?: "butt" | "round";
   labelValueStyle?: StyleProp<TextStyle>;
@@ -57,7 +57,7 @@ export const DonutChart = ({
   labelValueStyle,
   labelTitleStyle,
   containerStyle,
-  dispalyTitle,
+  title,
 }: IDonutProps) => {
   let donutItemListeners: any = [];
   const viewBox = new ViewBox({
