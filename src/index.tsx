@@ -37,7 +37,6 @@ export type IDonutProps = {
   labelTitleStyle?: StyleProp<TextStyle>;
   labelWrapperStyle?: StyleProp<ViewStyle>;
   containerStyle?: StyleProp<ViewStyle>;
-
   animationType?: DonutAnimationType;
 };
 
@@ -53,11 +52,11 @@ export const DonutChart = ({
   strokeWidth = 10,
   type = "round",
   animationType = "slide",
-
   labelWrapperStyle,
   labelValueStyle,
   labelTitleStyle,
   containerStyle,
+  dispalyTitle,
 }: IDonutProps) => {
   let donutItemListeners: any = [];
   const viewBox = new ViewBox({
@@ -75,6 +74,7 @@ export const DonutChart = ({
   const animatedPaths = useRef<Array<Animated.Value>>([]).current;
 
   const [displayValue, setDisplayValue] = useState<DonutItem>(data[0]);
+  const [dispalyTitle, setdispalyTitle] = useState<String>(dispalyTitle);
 
   // TODO:
   // remove WTF is this variable ?
@@ -323,7 +323,7 @@ export const DonutChart = ({
             {displayValue?.value}
           </Text>
           <Text style={_getLabelTitleStyle(displayValue?.color)}>
-            {displayValue?.name}
+            {dispalyTitle}
           </Text>
         </Animated.View>
       </View>
