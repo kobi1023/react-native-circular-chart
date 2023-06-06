@@ -31,6 +31,7 @@ export type IDonutProps = {
   radius: number;
   startAngle?: number;
   endAngle?: number;
+  dispalyTitle: string;
   strokeWidth?: number;
   type?: "butt" | "round";
   labelValueStyle?: StyleProp<TextStyle>;
