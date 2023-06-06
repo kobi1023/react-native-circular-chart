@@ -75,7 +75,7 @@ export const DonutChart = ({
   const animatedPaths = useRef<Array<Animated.Value>>([]).current;
 
   const [displayValue, setDisplayValue] = useState<DonutItem>(data[0]);
-  const [dispalyTitle, setdispalyTitle] = useState<String>(dispalyTitle);
+  const [dispalyTitle, setdispalyTitle] = useState<String>(title);
 
   // TODO:
   // remove WTF is this variable ?
