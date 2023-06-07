@@ -75,7 +75,7 @@ export const DonutChart = ({
   const animatedPaths = useRef<Array<Animated.Value>>([]).current;
 
   const [displayValue, setDisplayValue] = useState<DonutItem>(data[0]);
-  const [dispalyTitle, setdispalyTitle] = useState<String>(title);
+  //const [dispalyTitle, setdispalyTitle] = useState<String>(title);
 
   // TODO:
   // remove WTF is this variable ?
@@ -321,7 +321,7 @@ export const DonutChart = ({
         </Svg>
         <Animated.View style={_getLabelWrapperStyle()}>
           <Text style={_getLabelValueStyle(displayValue?.color)}>
-            {dispalyTitle}
+            {title}
           </Text>
         </Animated.View>
       </View>
